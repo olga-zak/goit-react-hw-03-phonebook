@@ -1,20 +1,23 @@
 import PropTypes from 'prop-types';
 
+import { ListItem } from './ContactListItem.styled';
+import { Button } from 'components/ContactForm/ContactForm.styled';
+
 export const ContactListItem = ({ id, name, number, deleteContact }) => {
   return (
-    <li>
+    <ListItem>
       <p>
         {name}: {number}
       </p>
-      <button
+      <Button
         type="button"
         onClick={() => {
           deleteContact(id);
         }}
       >
         Delete
-      </button>
-    </li>
+      </Button>
+    </ListItem>
   );
 };
 

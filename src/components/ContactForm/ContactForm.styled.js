@@ -33,8 +33,8 @@ export const FormInput = styled.input`
   }
 `;
 
-export const FormButton = styled.button`
-  min-width: 100px;
+export const Button = styled.button`
+  min-width: 70px;
   align-self: flex-start;
   padding: 5px 15px;
   letter-spacing: 1px;
