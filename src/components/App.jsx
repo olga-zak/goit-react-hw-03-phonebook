@@ -4,6 +4,8 @@ import { GlobalStyles } from './GlobalStyles';
 import { ContactForm } from './ContactForm/ContactForm';
 import { ContactList } from './ContactList/ContactList';
 import { Filter } from './Filter/Filter';
+import { Header } from './App.styled';
+import { SecondaryHeader } from './App.styled';
 
 export class App extends Component {
   state = {
@@ -58,9 +60,9 @@ export class App extends Component {
   render() {
     return (
       <>
-        <h1>Phonebook</h1>
+        <Header>Phonebook</Header>
         <ContactForm addContact={this.addContact} />
-        <h2>Contacts</h2>
+        <SecondaryHeader>Contacts</SecondaryHeader>
         <Filter
           filter={this.state.filter}
           findContact={this.saveFilteredValue}

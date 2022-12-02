@@ -1,12 +1,13 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
+import { FilterField, FilerInput } from './Filter.styled';
 
 export class Filter extends Component {
   render() {
     return (
-      <label>
+      <FilterField>
         Find contact by name:
-        <input
+        <FilerInput
           type="text"
           name="filter"
           value={this.props.filter}
@@ -15,7 +16,7 @@ export class Filter extends Component {
           onChange={this.props.findContact}
           required
         />
-      </label>
+      </FilterField>
     );
   }
 }
