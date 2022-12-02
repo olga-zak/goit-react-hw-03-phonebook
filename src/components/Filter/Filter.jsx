@@ -1,13 +1,14 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
-import { FilterField, FilerInput } from './Filter.styled';
+import { FilterField } from './Filter.styled';
+import { Input } from 'components/ContactForm/ContactForm.styled';
 
 export class Filter extends Component {
   render() {
     return (
       <FilterField>
         Find contact by name:
-        <FilerInput
+        <Input
           type="text"
           name="filter"
           value={this.props.filter}

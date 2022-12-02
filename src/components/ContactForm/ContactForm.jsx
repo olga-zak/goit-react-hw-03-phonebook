@@ -1,6 +1,6 @@
 import { Component } from 'react';
 
-import { Form, FormLabel, FormInput, Button } from './ContactForm.styled';
+import { Form, FormLabel, Input, Button } from './ContactForm.styled';
 
 import PropTypes from 'prop-types';
 
@@ -31,7 +31,7 @@ export class ContactForm extends Component {
         <Form onSubmit={this.handleSubmit}>
           <FormLabel>
             Name:
-            <FormInput
+            <Input
               value={name}
               onChange={this.handleChange}
               type="text"
@@ -43,7 +43,7 @@ export class ContactForm extends Component {
           </FormLabel>
           <FormLabel>
             Number:
-            <FormInput
+            <Input
               value={number}
               onChange={this.handleChange}
               type="tel"
