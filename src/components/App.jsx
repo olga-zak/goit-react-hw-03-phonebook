@@ -18,6 +18,23 @@ export class App extends Component {
     filter: '',
   };
 
+  //проверяем есть ли данные в localStorage и записываем их в state если true
+  componentDidMount() {
+    const localStorageData = localStorage.getItem('contacts');
+    //if (localStorageData !== null)
+    if (localStorageData) {
+      this.setState({ contacts: JSON.parse(localStorageData) });
+    }
+  }
+
+  //componentDidUpdate(prerProps, prevState)
+  //отслеживаем изменение state (при добавлении или удалении контакта)
+  componentDidUpdate(_, prevState) {
+    if (prevState.contacts !== this.state.contacts) {
+      localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
+    }
+  }
+
   //data - объект с именем и телефоном, которые ввели в форме
   addContact = data => {
     const newContact = {
